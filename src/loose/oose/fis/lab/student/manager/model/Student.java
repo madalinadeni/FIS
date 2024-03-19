@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Student {
     private String firstName;
-    private String lastName;
+    private String last_Name;
     private int age;
     private double meanGrade;
 
-    public Student(String firstName, String lastName, int age, double meanGrade) {
+    public Student(String firstName, String last_Name, int age, double meanGrade) {
         this.firstName = firstName;
-        this.lastName = lastName;
+        this.last_Name = last_Name;
         this.age = age;
         this.meanGrade = meanGrade;
     }
@@ -19,7 +19,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", lastName='" + last_Name + '\'' +
                 ", age=" + age +
                 ", meanGrade=" + meanGrade +
                 '}';
@@ -33,12 +33,12 @@ public class Student {
         return age == student.age &&
                 Double.compare(student.meanGrade, meanGrade) == 0 &&
                 Objects.equals(firstName, student.firstName) &&
-                Objects.equals(lastName, student.lastName);
+                Objects.equals(last_Name, student.last_Name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, age, meanGrade);
+        return Objects.hash(firstName, last_Name, age, meanGrade);
     }
 
     public String getFirstName() {
@@ -50,11 +50,11 @@ public class Student {
     }
 
     public String getLastName() {
-        return lastName;
+        return last_Name;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.last_Name = lastName;
     }
 
     public int getAge() {
